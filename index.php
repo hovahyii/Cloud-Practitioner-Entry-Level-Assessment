@@ -52,7 +52,7 @@
         <!-- About Section -->
         <div class="bg-gray-100 text-center py-4 mt-4 rounded-lg mb-4">
             <h2 class="text-xl font-bold mb-2">About This Website</h2>
-            <p class="text-gray-700">This website is built with the LAMP stack, runs on Docker, and is hosted on RunCloud, AWS, and DigitalOcean.</p>
+            <p class="text-gray-700">This website is built with the LAMP stack, runs on Docker, and is hosted on RunCloud, AWS, and Digital Ocean.</p>
         </div>
 
         <div class="bg-white  p-6 mt-4">
@@ -133,6 +133,13 @@
             </form>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+        <p class="text-sm">&copy; 2024 Jehovah Yii Zui Hon. All rights reserved.</p>
+        <p class="text-sm">Powered by RunCloud, AWS, and Digital Ocean.</p>
+    </footer>
+
 
     <script>
         let likeCount = <?php echo $like_count; ?>;
