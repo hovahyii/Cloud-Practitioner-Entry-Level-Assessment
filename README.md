@@ -212,3 +212,10 @@ Add the following line:
 By following these steps, you can deploy your Docker-based PHP application to both AWS EC2 and DigitalOcean droplets. Ensure to update any placeholder values with your actual configuration.
 
 For any further assistance or issues, please refer to the documentation or seek help from the respective communities.
+
+### Like this project? You can show your appreciation by buying Hovah a coffee ☕
+
+<a target="_blank" rel="noopener noreferrer" href="https://www.buymeacoffee.com/hovahyii"><img src="https://github.com/appcraftstudio/buymeacoffee/raw/master/Images/snapshot-bmc-button.png" width="300" style="max-width:100%;"></a>
+
+
+
