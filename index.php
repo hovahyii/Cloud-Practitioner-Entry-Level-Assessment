@@ -33,7 +33,7 @@
                     <h1 class="text-2xl font-bold ml-4">Jehovah Yii Zui Hon</h1>
                 </div>
                 <div class="flex sm:ml-auto mt-4 sm:mt-0 text-center sm:text-right sm:w-2/3 space-x-4 justify-end">
-                    <button class="bg-red-500 text-white px-4 py-2 rounded" onclick="incrementLike()">
+                    <button id="like-button" class="bg-red-500 text-white px-4 py-2 rounded" onclick="incrementLike()">
                         Like <span id="like-count"><?php echo $like_count; ?></span>
                     </button>
                     <a href="https://hovahyii.vercel.app" target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded">Visit My Website</a>
@@ -139,15 +139,16 @@
     </footer>
 
     <script>
-        let likeCount = <?php echo $like_count; ?>;
+            let likeCount = <?php echo $like_count; ?>;
 
-        function openForm() {
-            document.getElementById('formModal').classList.remove('hidden');
-        }
+            function openForm() {
+                document.getElementById('formModal').classList.remove('hidden');
+            }
 
-        function incrementLike() {
-            likeCount++;
-            document.getElementById('like-count').innerText = likeCount;
+            function incrementLike() {
+                likeCount++;
+                document.getElementById('like-count').innerText = likeCount;
+                document.getElementById('like-button').innerText = `Liked ${likeCount}`;
 
             // Send AJAX request to update the like count in the database
             var xhr = new XMLHttpRequest();
