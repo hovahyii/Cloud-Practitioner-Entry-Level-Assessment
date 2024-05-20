@@ -12,7 +12,6 @@
     <meta property="og:url" content="https://hovahyii.vercel.app">
     <meta property="og:type" content="website">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>Hovah Webpage</title>
     <style>
         @media (max-width: 640px) {
@@ -32,7 +31,6 @@
                 <div class="flex items-center sm:w-1/3">
                     <img src="images/photo.png" alt="Avatar" class="w-24 h-24 rounded-full border-4 border-white">
                     <h1 class="text-2xl font-bold ml-4">Jehovah Yii Zui Hon</h1>
-
                 </div>
                 <div class="flex sm:ml-auto mt-4 sm:mt-0 text-center sm:text-right sm:w-2/3 space-x-4 justify-end">
                     <button class="bg-red-500 text-white px-4 py-2 rounded" onclick="incrementLike()">
@@ -43,7 +41,7 @@
             </div>
         </div>
 
-            <!-- Thank You Section -->
+        <!-- Thank You Section -->
         <div class="bg-blue-500 text-center py-4 mt-4 rounded-lg mb-4 flex flex-col items-center">
             <img class="w-16 h-16 mb-2" src="images/rc-logo-white-icon.svg" alt="runcloud.svg">
             <h2 class="text-xl text-white font-bold">Thank you, Run Cloud for teaching...</h2>
@@ -55,7 +53,7 @@
             <p class="text-gray-700">This website is built with the LAMP stack, runs on Docker, and is hosted on RunCloud, AWS, and Digital Ocean.</p>
         </div>
 
-        <div class="bg-white  p-6 mt-4">
+        <div class="bg-white p-6 mt-4">
             <h2 class="text-2xl text-center font-bold mb-4">Say Something Nice Here 🤗</h2>
             <div id="memoryWall" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Add plus button as the first card -->
@@ -140,7 +138,6 @@
         <p class="text-sm">Powered by RunCloud, AWS, and Digital Ocean.</p>
     </footer>
 
-
     <script>
         let likeCount = <?php echo $like_count; ?>;
 
@@ -155,6 +152,15 @@
             // Send AJAX request to update the like count in the database
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "like.php", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        console.log(xhr.responseText);
+                    } else {
+                        console.error("Error: " + xhr.status + " " + xhr.statusText);
+                    }
+                }
+            };
             xhr.send();
         }
     </script>
